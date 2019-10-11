@@ -2,10 +2,11 @@ import React from "react";
 
 import "./styles/SideDrawer.css";
 import logo from "../../images/Logo.png";
-import Github from "../../images/social/github.svg"
-import Instagram from "../../images/social/instagram.svg"
-import Twitter from "../../images/social/twitter.svg"
-import Linkedin from "../../images/social/linkedin.svg"
+import Github from "../../images/social/github.svg";
+import Instagram from "../../images/social/instagram.svg";
+import Twitter from "../../images/social/twitter.svg";
+import Linkedin from "../../images/social/linkedin.svg";
+import Medium from "../../images/social/medium.svg";
 class SideDrawer extends React.Component {
   render() {
     return (
@@ -13,7 +14,7 @@ class SideDrawer extends React.Component {
         <div className="container">
           <div className="row ">
             <div className="col-12 text-center">
-              <img clasname="rounded" src={logo} alt="logo" />
+              <img clasname="rounded" src={logo} alt="logo" srcSet={logo} />
             </div>
             <div className="row">
               <div className="col-12 text-center">
@@ -32,15 +33,45 @@ class SideDrawer extends React.Component {
                 </p>
               </div>
               <div className="col-12 img-logo text-center">
-                  <ul>
-                      <li><a href="https://github.com/Dieghoatc"><img src= {Github} alt="GitHub" srcset=""/></a></li>
-                      <li><a href="https://www.instagram.com/dieghoatc/"><img src= {Instagram} alt="Instagram"/></a></li>
-                      <li><a href="https://twitter.com/Dieghoatc"><img src= {Twitter} alt="Twitter"/></a></li>
-                      <li><a href="https://www.linkedin.com/in/dieghoatc/"><img src={Linkedin} alt=""/></a></li>
-                  </ul>
+                <ul>
+                  <li>
+                    <a href="https://github.com/Dieghoatc">
+                      <img
+                        src={Github}
+                        srcSet={Github}
+                        alt="GitHub"
+                        srcset=""
+                      />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/dieghoatc/">
+                      <img src={Instagram} srcSet={Instagram} alt="Instagram" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/Dieghoatc">
+                      <img src={Twitter} srcSet={Twitter} alt="Twitter" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com/in/dieghoatc/">
+                      <img src={Linkedin} srcSet={Linkedin} alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://medium.com/@dieghoatc">
+                      <img src={Medium} alt="medium" srcSet={Medium} />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div className="col-12 text-center mt-3 font-italic">
+                <p>“No creo en el destino <br></br>porque odio pensar que no soy yo <br></br> quien controla mi vida.”<br></br><br></br>The Matrix</p>
+                
               </div>
               <div className="col-12 text-center fixed-bottom">
-                  <p>Copyright - Dieghoatc</p>
+                <p>Copyright - Dieghoatc</p>
               </div>
             </div>
           </div>

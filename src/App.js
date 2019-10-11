@@ -6,7 +6,6 @@ import SideDrawer from "./components/SideDrawer/SideDrawer";
 import Backdrop from "./components/Backdrop/Backdrop";
 import Home from "./components/Home/Home";
 
-
 class App extends React.Component {
   state = {
     sideDrawerOpen: false
@@ -28,7 +27,7 @@ class App extends React.Component {
 
     if (this.state.sideDrawerOpen) {
       sideDrawer = <SideDrawer />;
-      backdrop = <Backdrop click = {this.backdropClickHandler} />;
+      backdrop = <Backdrop click={this.backdropClickHandler} />;
     }
 
     return (
@@ -36,9 +35,9 @@ class App extends React.Component {
         <Toolbar drawerClickHandler={this.drawerToggleClickHandler}></Toolbar>
         {sideDrawer}
         {backdrop}
-        <main style={{ marginTop: "64px" }}>
-        <Home></Home>        
 
+        <main style={{ marginTop: "64px" }}>
+          <Home></Home>
         </main>
       </div>
     );

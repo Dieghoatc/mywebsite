@@ -2,15 +2,11 @@
   "name": "mywebsite",
   "version": "0.1.0",
   "private": true,
-  "engines": {
-    "node": "10.16.3"
-  },
   "dependencies": {
     "bootstrap": "^4.3.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
-    "react-scripts": "3.2.0",
-    "react-youtube": "^7.9.0"
+    "react-scripts": "3.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

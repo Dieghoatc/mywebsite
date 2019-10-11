@@ -1,40 +1,28 @@
 import React from "react";
-
-import YouTube from "react-youtube";
+import './Home.css'
 
 class Home extends React.Component {
   render() {
-    const opts = {
-      height: "390",
-      width: "640",
-      playerVars: {
-        autoplay: 1
-      }
-    };
-
     return (
       <div className="container">
         <div className="row">
-          <div className="col-2"></div>
-          <div className="col-8">
-            <div class="card">
-              <YouTube
-                videoId="y-BFrPQPGjM"
-                opts={opts}
-                onReady={this._onReady}
-              />
-              <div class="card-body">
-                <h5 class="card-title">
-                  Reik, J. Balvin, Lalo Ebratt - Indeciso
-                </h5>
-                <p class="card-text">
-                  Siempre que ella baila así <br></br>A mí me daña la cabeza <br></br>El día que
-                  la conocí <br></br> Tomaba tequila y cerveza 
+          <div className="col-6">
+            <div className="card">
+              <img className = "c-image rounded mx-auto d-block" src="https://i.ibb.co/N34BMnd/Simon-Dice.png" alt="Simon-Dice"/>
+              <div className="card-body">
+                <h5 className="card-title">Juego Simon Dice</h5>
+                <p className="card-text">
+                Es un juego que consiste en siguir el patrón de colores para entrenar tu memoria, haciendo clic en los botones en el orden correcto.
                 </p>
+                <p>Curso de Platzi, fundamentos de JavaScript</p>
+                <a href="https://github.com/Dieghoatc/Juego-Simon-Dice" className="btn btn-primary">
+                  Código
+                </a>
+                <span className="badge badge-warning m-3">JavaScrip</span>
               </div>
             </div>
           </div>
-          <div className="col-2"></div>
+          <div className="col-6"></div>
         </div>
       </div>
     );

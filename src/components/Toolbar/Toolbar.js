@@ -4,14 +4,15 @@ import DrawerToggleButton from "../SideDrawer/DrawerToggleButton";
 import "./style/Toolbar.css";
 
 const Toolbar = props => (
-  <header className="toolbar">
+  <header className="toolbar"> 
+
     <nav className="toolbar_nav">
       <div>
         <DrawerToggleButton
           click={props.drawerClickHandler}
         ></DrawerToggleButton>
       </div>
-      <div className="toolbar_logo">
+      <div className="toolbar_logo font-weight-bold">
         <a href="/">Dieghoatc</a>
       </div>
       <div className="spacer"></div>
