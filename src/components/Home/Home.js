@@ -1,22 +1,29 @@
 import React from "react";
 
+import YouTube from "react-youtube";
+
 class Home extends React.Component {
   render() {
+    const opts = {
+      height: "390",
+      width: "640",
+      playerVars: {
+        // https://developers.google.com/youtube/player_parameters
+        autoplay: 1
+      }
+    };
+
     return (
       <div className="container">
         <div className="row">
           <div className="col-2"></div>
           <div className="col-8">
             <div class="card">
-              <iframe
-                className="text-center"
-               
-                height="480"
-                src="https://www.youtube.com/embed/y-BFrPQPGjM"
-                frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
+              <YouTube
+                videoId="y-BFrPQPGjM"
+                opts={opts}
+                onReady={this._onReady}
+              />
               <div class="card-body">
                 <h5 class="card-title">
                   Reik, J. Balvin, Lalo Ebratt - Indeciso
