@@ -4,9 +4,8 @@ import "./App.css";
 import Toolbar from "./components/Toolbar/Toolbar";
 import SideDrawer from "./components/SideDrawer/SideDrawer";
 import Backdrop from "./components/Backdrop/Backdrop";
+import Home from "./components/Home/Home";
 
-
-import fondo from './images/thejoker2.jpg'
 
 class App extends React.Component {
   state = {
@@ -37,9 +36,9 @@ class App extends React.Component {
         <Toolbar drawerClickHandler={this.drawerToggleClickHandler}></Toolbar>
         {sideDrawer}
         {backdrop}
-        <div className="fondo"><img src={fondo} alt="" srcset=""/></div>
         <main style={{ marginTop: "64px" }}>
-          <p>esta </p>
+        <Home></Home>        
+
         </main>
       </div>
     );
