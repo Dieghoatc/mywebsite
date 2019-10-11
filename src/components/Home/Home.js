@@ -28,10 +28,8 @@ class Home extends React.Component {
                   Reik, J. Balvin, Lalo Ebratt - Indeciso
                 </h5>
                 <p class="card-text">
-                  Siempre que ella baila así A mí me daña la cabeza El día que
-                  la conocí Tomaba tequila y cerveza Y ahora yo me la paso
-                  buscando Una razón pa’ verte bailando Me robó el corazón sin
-                  permiso Su movimiento me tiene indeciso
+                  Siempre que ella baila así <br></br>A mí me daña la cabeza <br></br>El día que
+                  la conocí <br></br> Tomaba tequila y cerveza 
                 </p>
               </div>
             </div>
