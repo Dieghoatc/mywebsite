@@ -1,12 +1,14 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 
 import "./styles/SideDrawer.css";
-import logo from "../../images/Logo.png";
-import Github from "../../images/social/github.svg";
-import Instagram from "../../images/social/instagram.svg";
-import Twitter from "../../images/social/twitter.svg";
-import Linkedin from "../../images/social/linkedin.svg";
-import Medium from "../../images/social/medium.svg";
+import logo from "./../images/Logo.png";
+import Github from ".././images/social/github.svg";
+import Instagram from "./../images/social/instagram.svg";
+import Twitter from "./../images/social/twitter.svg";
+import Linkedin from "./../images/social/linkedin.svg";
+import Medium from "./../images/social/medium.svg";
+
 class SideDrawer extends React.Component {
   render() {
     return (
@@ -20,10 +22,10 @@ class SideDrawer extends React.Component {
               <div className="col-12 text-center">
                 <ul>
                   <li>
-                    <a href="/">Inicio</a>
+                    <Link to="/">Inicio</Link>
                   </li>
                   <li>
-                    <a href="/">Sobre mi</a>
+                    <Link to="/aboutme">Sobre mi</Link>
                   </li>
                 </ul>
               </div>
