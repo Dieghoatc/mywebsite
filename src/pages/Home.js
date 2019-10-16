@@ -10,9 +10,9 @@ class Home extends React.Component {
       <div className="container">
         <div className="row">
           <div className="col-12 col-md-6 mt-3">
-            <div className="card card-simon">
+            <div className="card">
               <img
-                className="c-image rounded mx-auto d-block mt-2"
+                className="rounded mx-auto d-block mt-2"
                 src="https://i.ibb.co/N34BMnd/Simon-Dice.png"
                 alt="Simon-Dice"
               />
@@ -48,7 +48,7 @@ class Home extends React.Component {
                 <p className="card-text">
                   The Rick and Morty API is an open API donde se aplican los
                   concepto Asincrono con el metodo Fetch para realizar una
-                  peticion Get
+                  peticion Get.
                 </p>
                 <p>Curso ReactJS de Platzi</p>
                 <a
