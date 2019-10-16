@@ -23,7 +23,7 @@ const Toolbar = props => (
             <a href="https://dieghoatc.wordpress.com/">Blog</a>
           </li>
           <li>
-            <Link to="/aboutme">Aboutme</Link>
+            <Link to="/aboutme">About me</Link>
           </li>
         </ul>
       </div>

@@ -2,7 +2,7 @@ import React from "react";
 
 import "./RickandMorty.css";
 
-import logo from "../images/projects/RickandMorty/logo.png";
+import logo from "../images/RickandMorty/logo.png";
 
 function CharacterCard(props) {
   const { character } = props;
@@ -25,10 +25,10 @@ class RickandMorty extends React.Component {
     loading: true,
     error: null,
     data: {
-        info: {},
+      info: {},
       results: []
     },
-    nextPage: 1
+    nextPage: 1,
   };
 
   //1.ComponentDidMount inicializacion del componente
@@ -54,11 +54,11 @@ class RickandMorty extends React.Component {
           info: data.info,
           results: [].concat(this.state.data.results, data.results)
         },
-        netxPage: this.state.nextPage + 1
+        nextPage: this.state.nextPage + 1
       });
     } catch (error) {
       this.setState({
-        loading: false, 
+        loading: false,
         error: error
       });
     }
