@@ -48,9 +48,9 @@ class Home extends React.Component {
               <div className="card-body">
                 <h5 className="card-title">Rick and Morty Api</h5>
                 <p className="card-text">
-                  The Rick and Morty API is an open API donde se aplican los
-                  concepto Asincrono con el metodo Fetch para realizar una
-                  peticion Get.
+                  The Rick and Morty API is an open API donde se aplica el
+                  concepto Asincrono en JavasScript, con el metodo Fetch para realizar una
+                  petición Get.
                 </p>
                 <p>Curso ReactJS de Platzi</p>
                 <a

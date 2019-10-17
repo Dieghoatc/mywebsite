@@ -1,83 +1,64 @@
-.asdas {
-  margin: 0;
+.gamebody {
+  height: 100px;
   background: #dedede;
   display: flex;
   align-items: center;
-  height: 70vh;
+  justify-content: center;
+  height: 55vh;
 }
-
 .gameboard {
-  height: 100vh;
-  width: 100vh;
+  height: 50vh;
+  width: 50vh;
+  border: 2px solid black;
   border-radius: 50%;
   overflow: hidden;
-  margin: 0 auto;
-  max-height: 60vh;
-  max-width: 60vh;
 }
-
 .color {
   width: 50%;
   height: 50%;
   cursor: pointer;
   display: inline-block;
 }
-
 .left {
   float: left;
 }
-
 .right {
-  float: left;
-}
-
+    float: left;
+  }
 .celeste {
   background: #22a6b3;
 }
-
-.celeste.light {
-  background: #7ed6df;
-}
-
+.celestelight {
+    background: #7ed6df;
+  }
 .violeta {
   background: #be2edd;
 }
-
-.violeta.light {
-  background: #e056fd;
-}
-
+.violetalight {
+    background: #e56ffd;
+  }
 .naranja {
   background: #f0932b;
 }
-
-.naranja.light {
-  background: #ffbe76;
-}
-
+.naranjalight {
+    background: #ffbe76;
+  }
 .verde {
-  background: #6ab04c;
+  background: #117a03;
 }
-
-.verde.light {
-  background: #badc58;
-}
-
+.verdelight {
+    background: #badc58;
+  }
 .btn-start {
-  width: 400px;
-  height: 100px;
-  background: #ecf0f1;
-  color: #2c3e50;
-  font-size: 2.5rem;
-  position: absolute;
-  top: calc(50% - 50px);
-  left: calc(50% - 200px);
-}
-
-.hide {
-  display: none;
-}
-
-* {
-  font-family: "Arial";
-}
+    width: 400px;
+    height: 100px;
+    background: #ecf0f1;
+    color: #2c3e50;
+    font-size: 2.5rem;
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 200px);
+  }
+  .hide {
+    display: none;
+  }
