@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-
 import "./SimonDice.css";
+import swal from "sweetalert";
 
 function Button(props) {
   return (
@@ -27,16 +27,13 @@ class SimonDice extends Component {
         verde: "color verde rigth"
       },
       viewButton: true,
-      secuencia: []
+      secuencia: [],
+      activarBotones: true,
+      gano: false
     };
   }
 
   handleClick = e => {
-    console.log({
-      name: e.target.name,
-      value: e.target.value
-    });
-
     this.setState({
       viewButton: false
     });
@@ -51,10 +48,10 @@ class SimonDice extends Component {
     //Math.floor => redondea hacia abajo los numeros decimales
     //n tiene un valor de 0, que fue undicado en un array de ceros con el metodo fill
     var genSecuencia;
-    this.genSecuencia = new Array(10)
+    this.genSecuencia = new Array(this.state.ultimoLevel)
       .fill(0)
       .map(x => Math.floor(Math.random() * 4));
-    console.log(`esteo es la generacion ${this.genSecuencia} `);
+    console.log(`Secuencia ${this.genSecuencia} `);
     this.setState({
       viewButton: false,
       secuencia: genSecuencia
@@ -64,8 +61,12 @@ class SimonDice extends Component {
 
   nextLevel = () => {
     this.subNivel = 0;
-    this.iluminarSecuencia();
-    this.agregarEventosClik();
+    setTimeout(() => {
+      this.iluminarSecuencia();
+    }, 500);
+    this.setState({
+      activarBotones: true
+    });
   };
   transforNumtoColor = num => {
     switch (num) {
@@ -84,7 +85,7 @@ class SimonDice extends Component {
   iluminarSecuencia = () => {
     for (let i = 0; i < this.state.level; i++) {
       const color = this.transforNumtoColor(this.genSecuencia[i]);
-      console.log(`este es el ciclo for ${color}`);
+      console.log(`Secuencia colores ${color}`);
       setTimeout(() => this.iluminarColor(color), 1000 * i);
     }
   };
@@ -146,30 +147,64 @@ class SimonDice extends Component {
       }
     });
   }
-  agregarEventosClik() {}
-
   handleClickCol = e => {
-    const nombreColor = e.target.dataset.color;
-    const numeroColor = this.transformColtoNum(nombreColor);
-    this.iluminarColor(nombreColor);
-    console.log(nombreColor);
-    if (numeroColor === this.secuencia[this.subNivel]) {
-      this.subNivel++;
-      if (this.subNivel === this.state.level) {
-        this.setState({
-          level: +1
-          //eliminar eventos click
-        });
-        if (this.state.level === this.state.ultimoLevel + 1) {
-          //gano
-        } else {
-          this.nextLevel();
+    if (this.state.activarBotones) {
+      const nombreColor = e.target.dataset.color;
+      const numeroColor = this.transformColtoNum(nombreColor);
+      this.iluminarColor(nombreColor);
+      console.log(`Color orpimdo ${nombreColor}`);
+      console.log(`Nivel actual ${this.state.level}`);
+      console.log(
+        `Numero color ${numeroColor} => Posicion secuencia ${
+          this.genSecuencia[this.subNivel]
+        }`
+      );
+
+      if (numeroColor === this.genSecuencia[this.subNivel]) {
+        this.subNivel++;
+        if (this.subNivel === this.state.level) {
+          this.setState(state => {
+            return {
+              level: state.level + 1,
+              activarBotones: false
+            };
+          });
+          console.log(
+            `Nuvel = ${this.state.level} === ${this.state.ultimoLevel}`
+          );
+          if (this.state.level === this.state.ultimoLevel) {
+            //gano
+            this.ganoElJuego();
+          } else {
+            setTimeout(this.nextLevel, 2000);
+          }
         }
       } else {
-        //perdio
+        this.perdioElJuego();
       }
     }
+    console.log(`subNivel actual ${this.subNivel}`);
   };
+
+  ganoElJuego() {
+    swal("Ganaste!", "Reinicia el juego!", "success").then(() => {
+      this.setState({
+        level: 1,
+        viewButton: true
+      });
+    });
+  }
+
+  perdioElJuego() {
+    swal("Perdistes!", "Reinicia el juego!", "error").then(() => {
+      this.setState({
+        level: 1,
+        activarBotones: false,
+        viewButton: true
+      });
+    });
+  }
+
   transformColtoNum = col => {
     switch (col) {
       case "celeste":
@@ -187,9 +222,11 @@ class SimonDice extends Component {
 
   render() {
     let vButton;
+
     if (this.state.viewButton) {
       vButton = <Button onClick={this.handleClick}></Button>;
     }
+
     return (
       <div className="container">
         <div className="row m-3">
