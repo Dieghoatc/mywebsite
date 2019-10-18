@@ -229,6 +229,12 @@ class SimonDice extends Component {
 
     return (
       <div className="container">
+          <div className="row m-3">
+              <div className="col-12">
+              <span className="badge badge-info m-3">{`Nivel: ${this.state.level}`}</span>
+              <span className="badge badge-danger m-3">{`Ultimo - Nivel: ${this.state.ultimoLevel}`}</span>
+              </div>
+          </div>
         <div className="row m-3">
           <div className="col-12 gamebody ">
             <div className="gameboard ">
