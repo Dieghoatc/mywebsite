@@ -69,11 +69,7 @@ class SideDrawer extends React.Component {
                 </ul>
               </div>
               <div className="col-12 text-center mt-3 font-italic">
-                <p>“No creo en el destino <br></br>porque odio pensar que no soy yo <br></br> quien controla mi vida.”<br></br><br></br>The Matrix</p>
-                
-              </div>
-              <div className="col-12 text-center fixed-bottom">
-                <p>Copyright - Dieghoatc</p>
+                <p>“No creo en el destino <br></br>porque odio pensar que no soy yo <br></br> quien controla mi vida.”<br></br>The Matrix</p>                
               </div>
             </div>
           </div>

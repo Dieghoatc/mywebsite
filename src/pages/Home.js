@@ -12,7 +12,7 @@ class Home extends React.Component {
       width: "500",
       playerVars: {
         // https://developers.google.com/youtube/player_parameters
-        autoplay: 1
+        autoplay: 0 
       }
     };
 

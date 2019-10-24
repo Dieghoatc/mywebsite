@@ -1,19 +1,49 @@
-import React from 'react'
+import React from "react";
 
-import './styles/AboutMe.css'
+import "./styles/AboutMe.css";
+
+import About from "../components/about/About";
+import Education from "../components/about/Education";
+import Experience from "../components/about/Experience";
+import Certificates from "../components/about/Certificates";
 
 class AboutMe extends React.Component {
-    render(){
-        return(
-            <div className="container mt-3">
-                <div className="row">
-                    <div className="col-12 col-md-7-auto aboutme">
-                        <h1>About me</h1>
-                        <p>My name is Diego I'm from Bogotá - Colombia. I'm being Student all my life and I love the phrase "Never stop to learn". I'm Telecommunications Engineer and Software Developer. <br></br> I practice football and tennis. My favorite music Popular. I love Electronic Music, Punk, Reggae Music, Salsa, Rap and Rock and to school i used to listen listened a lot of Vallenato. "Solo practicaba mi ingles" :v</p>
-                    </div>
-                </div>
-            </div>
-        );
-    }
+  state = {
+    modalIsOpen: false
+  };
+  handleOpenModal = e => {
+    console.log("open");
+    this.setState({
+      modalIsOpen: true
+    });
+  };
+
+  handleCloseModal = e => {
+    console.log("close");
+    this.setState({
+      modalIsOpen: false
+    });
+  };
+
+  render() {
+    return (
+      <div className="container AboutMe-Container mt-3">
+        <div className="row">
+          <div className="col-12 col-md-8 AboutMe-Info">
+            <Education></Education>
+            <Experience></Experience>
+            <Certificates
+              onCloseModal ={ this.handleCloseModal}
+              onOpenModal = {this.handleOpenModal}
+              modalIsOpen = {this.state.modalIsOpen}
+            ></Certificates>
+          </div>
+          <div className="col-12 col-md-4 AboutMe-Info">
+            <About></About>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
-export default AboutMe
+export default AboutMe;
