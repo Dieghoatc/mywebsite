@@ -3,19 +3,10 @@ import React from "react";
 import "./styles/Home.css";
 import RickandMortyLogo from "../projects/images/RickandMorty/logo.png";
 import { Link } from "react-router-dom";
-import YouTube from "react-youtube";
 
 class Home extends React.Component {
   render() {
-    const opts = {
-      height: "390",
-      width: "500",
-      playerVars: {
-        // https://developers.google.com/youtube/player_parameters
-        autoplay: 0
-      }
-    };
-
+   
     return (
       <div className="container">
         <div className="row">
