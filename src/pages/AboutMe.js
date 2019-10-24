@@ -8,23 +8,6 @@ import Experience from "../components/about/Experience";
 import Certificates from "../components/about/Certificates";
 
 class AboutMe extends React.Component {
-  state = {
-    modalIsOpen: false
-  };
-  handleOpenModal = e => {
-    console.log("open");
-    this.setState({
-      modalIsOpen: true
-    });
-  };
-
-  handleCloseModal = e => {
-    console.log("close");
-    this.setState({
-      modalIsOpen: false
-    });
-  };
-
   render() {
     return (
       <div className="container AboutMe-Container mt-3">
@@ -32,11 +15,7 @@ class AboutMe extends React.Component {
           <div className="col-12 col-md-8 AboutMe-Info">
             <Education></Education>
             <Experience></Experience>
-            <Certificates
-              onCloseModal ={ this.handleCloseModal}
-              onOpenModal = {this.handleOpenModal}
-              modalIsOpen = {this.state.modalIsOpen}
-            ></Certificates>
+            <Certificates></Certificates>
           </div>
           <div className="col-12 col-md-4 AboutMe-Info">
             <About></About>

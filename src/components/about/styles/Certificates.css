@@ -1,14 +1,18 @@
-.CertificatesContainer h2{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 100;
-    letter-spacing: .8px;
-    margin: 1em 0 0 0;
-    color: #C2185B;
+.CertificatesContainer h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  letter-spacing: 0.8px;
+  margin: 1em 0 0 0;
+  color: #c2185b;
 }
-.card {
-    cursor: pointer;
+.Certifiacatescard {
+  cursor: pointer;
+  box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
 }
 .CertificatesContainer img {
-    height: 150px;
-    width: 100%;
+  display: block;
+  margin: 5px auto;
+  padding: 10px;
+  border-radius: 20%;
 }

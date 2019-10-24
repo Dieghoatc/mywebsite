@@ -12,7 +12,7 @@ class Home extends React.Component {
       width: "500",
       playerVars: {
         // https://developers.google.com/youtube/player_parameters
-        autoplay: 0 
+        autoplay: 0
       }
     };
 
@@ -20,7 +20,7 @@ class Home extends React.Component {
       <div className="container">
         <div className="row">
           <div className="col-12 col-md-6 mt-3">
-            <div className="card">
+            <div className="card cardHome">
               <Link to="/simondice">
                 <img
                   className="rounded mx-auto d-block mt-2"
@@ -48,7 +48,7 @@ class Home extends React.Component {
             </div>
           </div>
           <div className="col-12 col-md-6 mt-3">
-            <div className="card card-Rickandmorty">
+            <div className="card cardHome">
               <Link to="/RickandMorty">
                 <img
                   className="rounded mx-auto d-block mt-2"
@@ -76,7 +76,7 @@ class Home extends React.Component {
             </div>
           </div>
           <div className="col-12 col-md-6 mt-3">
-            <div className="card">
+            <div className="card cardHome">
               <Link to="/">
                 <img
                   className="rounded mx-auto d-block mt-2"
@@ -99,24 +99,6 @@ class Home extends React.Component {
                 <span className="badge badge-danger m-2">
                   Developing ................................... 40%
                 </span>
-              </div>
-            </div>
-          </div>
-          <div className="col-12 col-md-6 mt-3">
-            <div className="card">
-              <Link to="/"></Link>
-              <div className="card-body">
-                <h5 className="card-title">
-                  <YouTube
-                    videoId="p8m4OYCtIEg"
-                    opts={opts}
-                    onReady={this._onReady}
-                  />
-                </h5>
-                <p className="card-text"></p>
-                <p></p>
-                <span className="badge badge-warning m-2">JavaScript</span>
-                <span className="badge badge-primary m-2">ReactJS</span>
               </div>
             </div>
           </div>

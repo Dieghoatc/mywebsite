@@ -1,12 +1,11 @@
 import React from "react";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 import DrawerToggleButton from "./DrawerToggleButton";
-import './styles/Toolbar.css'
+import "./styles/Toolbar.css";
 
 const Toolbar = props => (
-  <header className="toolbar"> 
-
+  <header className="toolbar">
     <nav className="toolbar_nav">
       <div>
         <DrawerToggleButton
@@ -19,10 +18,6 @@ const Toolbar = props => (
       <div className="spacer"></div>
       <div className="toolbar_nav_items">
         <ul>
-          <li>
-            <a href="https://dieghoatc.wordpress.com/">Blog</a>
-          </li>
-          
           <li>
             <Link to="/portafolio">Portafolio</Link>
           </li>

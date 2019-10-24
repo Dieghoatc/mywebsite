@@ -9,7 +9,7 @@ const Modal = props => {
   return (
     <div className="container" onClick = {props.onClose}>
       <div className="row">
-        <div className="col">
+        <div className="col-12">
           {ReactDOM.createPortal(
             <div className="Modal">
               <div className="ModalContainer">
